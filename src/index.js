@@ -1,3 +1,4 @@
+let intervalId;
 function updateTime() {
   // Cape Town
   let taipeiElement = document.querySelector("#taipei");
@@ -8,7 +9,7 @@ function updateTime() {
 
     taipeiDateElement.innerHTML = taipeiTime.format("MMMM Do YYYY");
     taipeiTimeElement.innerHTML = taipeiTime.format(
-      "h:m:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
   //Lausanne
@@ -20,7 +21,7 @@ function updateTime() {
 
     lausanneDateElement.innerHTML = lausanneTime.format("MMMM Do YYYY");
     lausanneTimeElement.innerHTML = lausanneTime.format(
-      "h:m:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
@@ -41,7 +42,7 @@ function updateCity(event) {
                     </div>
                     <div class="time">${cityTime.format(
                       "h:mm:ss"
-                    )}<small>${cityTime.format("A")}</small></div>
+                    )} <small>${cityTime.format("A")}</small></div>
                 </div>`;
 }
 
